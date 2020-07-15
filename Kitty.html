@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Rubik:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylekitty.css">
+    <link rel="shortcut icon" href="./images/catleg.png" type="image/x-icon">
+    <link rel="icon" href="./images/catleg.png" type="image/x-icon">
+    <title>CatHotel</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="#">
+                        <img src="images/logo.svg" alt="logo" class="logo-img">
+                    </a>
+                </div>
+                <div class="header-nav">
+                    <a href="#">Почему мы?</a>
+                    <a href="#">Номера</a>
+                    <a href="#">Отзывы</a>
+                    <a href="#">Как нас найти</a>
+                </div>
+            </div>
+        </div>
+        <div class="sub-header">
+            <h1 class="title">Наши номера</h1>
+            <div class="dropdown-filter">
+                <button class="dropdown-filter__button">&uarr; По площади <strong>&and;</strong></button>
+                <div class="dropdown-filter__content">
+                    <a href="#">&darr; По площади</a>
+                    <a href="#">&uarr; По цене</a>
+                    <a href="#">&darr; По цене</a>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="grid grid-sidebar">
+                <p>Цена за сутки, ₽</p>
+                <div class="sidebar__price"><input type="text" name="from" id="pricefrom" placeholder="от 100"
+                        size="14">
+                    <input type="text" name="to" id="priceto" placeholder="до 600" size="14">
+                </div>
+                <p>Площадь</p>
+                <div><input type="checkbox">0,63 м2</div>
+                <div><input type="checkbox">0,90 м2</div>
+                <div><input type="checkbox">1,13 м2</div>
+                <div><input type="checkbox">1,56 м2</div>
+                <div><input type="checkbox">2,56 м2</div>
+                <div><input type="checkbox">2,88 м2</div>
+                <p>Оснащение номера</p>
+                <div><input type="checkbox">Пустой номер</div>
+                <div><input type="checkbox">Лежак</div>
+                <div><input type="checkbox">Когтеточка</div>
+                <div><input type="checkbox">Игровой комплекс</div>
+                <div><input type="checkbox">Домик</div>
+                <a href="#" class="button button-block button-block-sidebar">
+                    Применить
+                </a>
+                <a href="#" class="button button-block button-block-sidebar">
+                    Сбросить фильтр
+                </a>
+            </div>
+            <div class="grid grid-products">
+                <div>
+                    <div class="card">
+                        <div class="card-media">
+                            <img src="./images/Rectangle_46.png" alt="econom" class="card-image">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">Эконом</div>
+                            <div class="card-params">
+                                <div class="card-param">Размеры (ШхГхВ) - 90х70х180 см</div>
+                                <div class="card-param">Площадь - 0,63 м2</div>
+                                <div class="card-param">Оснащение номера: <span class="card-features">
+                                        <span class="card-feature">
+                                            <img src="./images/none.png" class="icon">
+                                        </span>
+                                </div>
+                                <div class="card-param">Цена за сутки: <span class="card-price">100₽</span></div>
+                            </div>
+                            <div class="card-actions">
+                                <a href="#" class="button button-block">
+                                    Забронировать
+                                    <span class="button-icon">
+                                        <img src="./images/catleg.png" class="icon">
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card">
+                        <div class="card-media">
+                            <img src="./images/Rectangle_47.png" alt="economplus" class="card-image">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">Эконом плюс</div>
+                            <div class="card-params">
+                                <div class="card-param">Размеры (ШхГхВ) - 90х100х180 см</div>
+                                <div class="card-param">Площадь - 0,90 м2</div>
+                                <div class="card-param">Оснащение номера <span class="card-features">
+                                        <span class="card-feature">
+                                            <img src="./images/bed.png" class="icon">
+                                        </span>
+                                        <span class="card-feature">
+                                            <img src="./images/tree.png" class="icon">
+                                        </span>
+                                    </span> </div>
+                                <div class="card-param">Цена за сутки: <span class="card-price">200₽</span></div>
+                            </div>
+                            <div class="card-actions">
+                                <a href="#" class="button button-block">
+                                    Забронировать
+                                    <span class="button-icon">
+                                        <img src="./images/catleg.png" class="icon">
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card">
+                        <div class="card-media">
+                            <img src="./images/Rectangle_48.png" alt="comfort" class="card-image">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">Комфорт</div>
+                            <div class="card-params">
+                                <div class="card-param">Размеры (ШхГхВ) - 100х125х180 см</div>
+                                <div class="card-param">Площадь - 1,13 м2</div>
+                                <div class="card-param">Оснащение номера <span class="card-features">
+                                        <span class="card-feature">
+                                            <img src="./images/bed.png" class="icon">
+                                        </span>
+                                        <span class="card-feature">
+                                            <img src="./images/tree.png" class="icon">
+                                        </span>
+                                        <span class="card-feature">
+                                            <img src="./images/ball.png" class="icon">
+                                        </span>
+                                    </span> </div>
+                                <div class="card-param">Цена за сутки: <span class="card-price">250₽</span></div>
+                            </div>
+                            <div class="card-actions">
+                                <a href="#" class="button button-block">
+                                    Забронировать
+                                    <span class="button-icon">
+                                        <img src="./images/catleg.png" class="icon">
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card">
+                        <div class="card-media">
+                            <img src="./images/img-01.jpg" alt="suit" class="card-image">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">Сьют</div>
+                            <div class="card-params">
+                                <div class="card-param">Размеры (ШхГхВ) - 125х125х180 см</div>
+                                <div class="card-param">Площадь - 1,56 м2</div>
+                                <div class="card-param">Оснащение номера <span class="card-features">
+                                        <span class="card-feature">
+                                            <img src="./images/bed.png" class="icon">
+                                        </span>
+                                        <span class="card-feature">
+                                            <img src="./images/tree.png" class="icon">
+                                        </span>
+                                        <span class="card-feature">
+                                            <img src="./images/ball.png" class="icon">
+                                        </span>
+                                    </span> </div>
+                                <div class="card-param">Цена за сутки: <span class="card-price">350₽</span></div>
+                            </div>
+                            <div class="card-actions">
+                                <a href="#" class="button button-block">
+                                    Забронировать
+                                    <span class="button-icon">
+                                        <img src="./images/catleg.png" class="icon">
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card">
+                        <div class="card-media">
+                            <img src="./images/Rectangle_49.png" alt="lux" class="card-image">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">Люкс</div>
+                            <div class="card-params">
+                                <div class="card-param">Размеры (ШхГхВ) - 160х160х180 см</div>
+                                <div class="card-param">Площадь - 2,56 м2</div>
+                                <div class="card-param">Оснащение номера <span class="card-features">
+                                        <span class="card-feature">
+                                            <img src="./images/bed.png" class="icon">
+                                        </span>
+                                        <span class="card-feature">
+                                            <img src="./images/tree.png" class="icon">
+                                        </span>
+                                        <span class="card-feature">
+                                            <img src="./images/ball.png" class="icon">
+                                        </span>
+                                        <span class="card-feature">
+                                            <img src="./images/house.png" class="icon">
+                                        </span>
+                                    </span> </div>
+                                <div class="card-param">Цена за сутки: <span class="card-price">500₽</span></div>
+                            </div>
+                            <div class="card-actions">
+                                <a href="#" class="button button-block">
+                                    Забронировать
+                                    <span class="button-icon">
+                                        <img src="./images/catleg.png" class="icon">
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card">
+                        <div class="card-media">
+                            <img src="./images/Rectangle_50.png" alt="superlux" class="card-image">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">Супер Люкс</div>
+                            <div class="card-params">
+                                <div class="card-param">Размеры (ШхГхВ) - 180х160х180 см</div>
+                                <div class="card-param">Площадь - 2,88 м2</div>
+                                <div class="card-param">Оснащение номера <span class="card-features">
+                                        <span class="card-feature">
+                                            <img src="./images/bed.png" class="icon">
+                                        </span>
+                                        <span class="card-feature">
+                                            <img src="./images/tree.png" class="icon">
+                                        </span>
+                                        <span class="card-feature">
+                                            <img src="./images/ball.png" class="icon">
+                                        </span>
+                                        <span class="card-feature">
+                                            <img src="./images/house.png" class="icon">
+                                        </span>
+                                    </span> </div>
+                                <div class="card-param">Цена за сутки: <span class="card-price">600₽</span></div>
+                            </div>
+                            <div class="card-actions">
+                                <a href="#" class="button button-block">
+                                    Забронировать
+                                    <span class="button-icon">
+                                        <img src="./images/catleg.png" class="icon">
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="promotion">
+            <div class="promotion-body">
+                <h2 class="promotion-title">Каждый 7-й день<br>
+                    <span>бесплатно!</span>
+                </h2>
+                <p class="promotion-content">Акция действует при размещении<br> в номерах "Люкс" и "Супер-Люкс"</p>
+                <a href="#" class="button button-block button-block-promotion">
+                    Забронировать
+                    <span class="button-icon button-icon-promotion">
+                        <img src="./images/catleg_white.png" class="icon">
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="location">
+        <div class="contacts">
+            <div class="contacts-body">
+                <h2 class="contacts-body__title">Как нас найти</h2>
+                <p class="contacts-body__title-p">Адрес</p>
+                <span class="contacts-body__text">Санкт-Петербург,<br> ул. Большая Конюшенная, д.19</span>
+                <p class="contacts-body__title-p">Режим работы</p>
+                <span class="contacts-body__text">Ежедневно, с 9:00 до 20:00</span>
+                <p class="contacts-body__title-p">Телефон</p>
+                <span class="contacts-body__text">8 (800) 333-55-99</span>
+                <p class="contacts-body__title-p">E-mail</p>
+                <span class="contacts-body__text">info@cat-hotel.ru</span>
+                <p class="contacts-body__title-p">Социальные сети</p>
+                <span class="contacts-body__text">
+                    <a href="https://www.facebook.com/">
+                        <img src="./images/facebook.png" alt="facebook"></a>
+                    <a href="https://www.instagram.com/">
+                        <img src="./images/instagram.png" alt="instagram"></a>
+                </span>
+            </div>
+        </div>
+        <div class="map">
+            <img src="./images/catfull.png" alt="catfull" class="catatmap">
+        </div>
+    </div>
+    <div class="footer">
+        <div class="header-container">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/logo.svg" alt="logo" class="logo-img">
+                </a>
+            </div>
+            <div class="header-nav">
+                <a href="#">Почему мы?</a>
+                <a href="#">Номера</a>
+                <a href="#">Отзывы</a>
+                <a href="#">Как нас найти</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
