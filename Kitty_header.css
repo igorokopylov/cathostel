@@ -49,6 +49,9 @@
 .header__link:hover {
     color: #FF7236;
 }
+.header__link-down {
+    display: none;    
+}
 @media (max-width:767px) {
     body.lock {
         overflow: hidden;
@@ -124,5 +127,8 @@
     }
     .header__link {
         font-size: 20px;
+    }
+    .header__link-down {
+        display: inherit;
     }
 }
