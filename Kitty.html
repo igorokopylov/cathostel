@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Rubik:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="stylekitty.css">
     <link rel="stylesheet" type="text/css" href="Kitty_header.css">
+    <link rel="stylesheet" type="text/css" href="media.css">
     <link rel="shortcut icon" href="./images/catleg.png" type="image/x-icon">
     <link rel="icon" href="./images/catleg.png" type="image/x-icon">
     <title>CatHotel</title>
@@ -42,6 +43,7 @@
                         <li class="header__link-down">
                             <a href="#" class="header__link"><img src="./images/facebook.png" alt=""></a>
                             <a href="#" class="header__link"><img src="./images/instagram.png" alt=""></a>
+                            <a href="#" class="header__link"><img src="./images/vk.png" alt=""></a>
                         </li>
                     </ul>
                 </nav>
@@ -50,13 +52,29 @@
     </header>
     <div class="container">
         <div class="sub-header">
-            <h1 class="title">Наши номера</h1>
-            <div class="dropdown-filter">
-                <button class="dropdown-filter__button">&uarr; По площади <strong>&and;</strong></button>
-                <div class="dropdown-filter__content">
-                    <a href="#">&darr; По площади</a>
-                    <a href="#">&uarr; По цене</a>
-                    <a href="#">&darr; По цене</a>
+            <h1 class="title h1">Наши номера</h1>
+            <div class="primary-and-dropdown-filters button-filter">
+                <div class="button_primary_filter">
+                    <span>
+                        <svg width="12" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.5 8.68421L0 1.57895V0H12V1.57895L7.5 8.68421V13.4211L4.5 15V8.68421Z"
+                                fill="#1A212F" />
+                        </svg>
+                    </span>
+                    <span> Фильтр</span>
+                </div>
+                <div class="dropdown-filter">
+                    <div class="dropdown-filter__button">
+                        <span>&uarr; По площади</span>
+                        <span>
+                            <img src="./images/V.png">
+                        </span>
+                    </div>
+                    <div class="dropdown-filter__content">
+                        <a href="#">&darr; По площади</a>
+                        <a href="#">&uarr; По цене</a>
+                        <a href="#">&darr; По цене</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -68,18 +86,18 @@
                     <input type="text" name="to" id="priceto" placeholder="до 600" size="14">
                 </div>
                 <p>Площадь</p>
-                <div><input type="checkbox">0,63 м2</div>
-                <div><input type="checkbox">0,90 м2</div>
-                <div><input type="checkbox">1,13 м2</div>
-                <div><input type="checkbox">1,56 м2</div>
-                <div><input type="checkbox">2,56 м2</div>
-                <div><input type="checkbox">2,88 м2</div>
+                <div><input type="checkbox" class="checkbox">0,63 м2</div>
+                <div><input type="checkbox" class="checkbox">0,90 м2</div>
+                <div><input type="checkbox" class="checkbox">1,13 м2</div>
+                <div><input type="checkbox" class="checkbox">1,56 м2</div>
+                <div><input type="checkbox" class="checkbox">2,56 м2</div>
+                <div><input type="checkbox" class="checkbox">2,88 м2</div>
                 <p>Оснащение номера</p>
-                <div><input type="checkbox">Пустой номер</div>
-                <div><input type="checkbox">Лежак</div>
-                <div><input type="checkbox">Когтеточка</div>
-                <div><input type="checkbox">Игровой комплекс</div>
-                <div><input type="checkbox">Домик</div>
+                <div><input type="checkbox" class="checkbox">Пустой номер</div>
+                <div><input type="checkbox" class="checkbox">Лежак</div>
+                <div><input type="checkbox" class="checkbox">Когтеточка</div>
+                <div><input type="checkbox" class="checkbox">Игровой комплекс</div>
+                <div><input type="checkbox" class="checkbox">Домик</div>
                 <a href="#" class="button button-block button-block-sidebar">
                     Применить
                 </a>
@@ -98,10 +116,10 @@
                             <div class="card-params">
                                 <div class="card-param">Размеры (ШхГхВ) - 90х70х180 см</div>
                                 <div class="card-param">Площадь - 0,63 м2</div>
-                                <div class="card-param">Оснащение номера <span class="card-features">
-                                        <span class="card-feature">
-                                            <img src="./images/none.png" class="icon">
-                                        </span>
+                                <div class="card-param">Оснащение номера
+                                    <span class="card-feature">
+                                        <img src="./images/none.png" class="icon">
+                                    </span>
                                 </div>
                                 <div class="card-param">Цена за сутки: <span class="card-price">100₽</span></div>
                             </div>
@@ -291,21 +309,23 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="promotion">
-        <div class="promotion-body">
-            <h2 class="promotion-title">Каждый 7-й день<br>
-                <span>бесплатно!</span>
-            </h2>
-            <p class="promotion-content">Акция действует при размещении<br> в номерах "Люкс" и "Супер-Люкс"</p>
-            <a href="#" class="button button-block button-block-promotion">
-                Забронировать
-                <span class="button-icon button-icon-promotion">
-                    <img src="./images/catleg_white.png" class="icon">
-                </span>
-            </a>
+        <div class="promotion">
+            <div class="promotion-body">
+                <h2 class="promotion-title">Каждый 7-й день<br>
+                    <span>бесплатно!</span>
+                </h2>
+                <p class="promotion-content">Акция действует при размещении<br> в номерах "Люкс" и "Супер-Люкс"</p>
+                <div class="promotion__button">
+                    <a href="#" class="button button-block button-block-promotion">
+                        Забронировать
+                        <span class="button-icon button-icon-promotion">
+                            <img src="./images/catleg_white.png" class="icon">
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="promotion__footer-for-mobile"></div>
         </div>
-    </div>
     </div>
     <div class="location">
         <div class="contacts">
@@ -334,21 +354,103 @@
     </div>
     <div class="footer">
         <div class="container">
-            <div class="logo">
-                <a href="#">
-                    <img src="images/logo" alt="logo" class="logo-img">
+            <div class="header__body">
+                <a href="#" class="header__logo">
+                    <img src="images/logo.svg">
                 </a>
-            </div>
-            <div class="header-nav">
-                <a href="#">Почему мы?</a>
-                <a href="#">Номера</a>
-                <a href="#">Отзывы</a>
-                <a href="#">Как нас найти</a>
+                <div class="header__burger">
+                    <span></span>
+                </div>
+                <nav class="header__menu">
+                    <ul class="header__list">
+                        <li>
+                            <a href="#" class="header__link">Почему мы?</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__link">Номера</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__link">Отзывы</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__link">Как нас найти</a>
+                        </li>
+                        <li class="header__link-down">
+                            <a href="" class="header__link">8 (800) 333-55-99</a>
+                        </li>
+                        <li class="header__link-down">
+                            <a href="#" class="header__link"><img src="./images/facebook.png" alt=""></a>
+                            <a href="#" class="header__link"><img src="./images/instagram.png" alt=""></a>
+                            <a href="#" class="header__link"><img src="./images/vk.png" alt=""></a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>
+
+    <div class="modal" id="modal_filter">
+        <div class="modal__background"></div>
+        <div class="modal__foreground">
+            <div class="modal__dialog">
+                <div class="modal__header">
+                    <h3>Фильтры</h3>
+                    <button type="button" class="modal__close">X</button>
+                </div>
+                <div class="modal__body">
+                    <div class="grid grid-sidebar-ipad">
+                        <p>Цена за сутки, ₽</p>
+                        <div class="sidebar__price"><input type="text" name="from" id="pricefrom" placeholder="от 100"
+                                size="14">
+                            <input type="text" name="to" id="priceto" placeholder="до 600" size="14">
+                        </div>
+                        <p>Площадь</p>
+                        <div><input type="checkbox" class="checkbox">0,63 м2</div>
+                        <div><input type="checkbox" class="checkbox">0,90 м2</div>
+                        <div><input type="checkbox" class="checkbox">1,13 м2</div>
+                        <div><input type="checkbox" class="checkbox">1,56 м2</div>
+                        <div><input type="checkbox" class="checkbox">2,56 м2</div>
+                        <div><input type="checkbox" class="checkbox">2,88 м2</div>
+                        <p>Оснащение номера</p>
+                        <div><input type="checkbox" class="checkbox">Пустой номер</div>
+                        <div><input type="checkbox" class="checkbox">Лежак</div>
+                        <div><input type="checkbox" class="checkbox">Когтеточка</div>
+                        <div><input type="checkbox" class="checkbox">Игровой комплекс</div>
+                        <div><input type="checkbox" class="checkbox">Домик</div>
+                        <a href="#" class="button button-block button-block-sidebar">
+                            Применить
+                        </a>
+                        <a href="#" class="button button-block button-block-sidebar">
+                            Сбросить фильтр
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="script.js"></script>
+    <script>
+
+        const button = document.querySelector(".button-filter");
+        const modalClose = document.querySelector("#modal_filter .modal__close");
+        const modalBackground = document.querySelector("#modal_filter .modal__background");
+        const modal = document.querySelector("#modal_filter");
+
+        button.addEventListener("click", function () {
+            modal.classList.add("is-open");
+        })
+
+        modalClose.addEventListener("click", function () {
+            modal.classList.remove("is-open");
+        })
+
+        modalBackground.addEventListener("click", function () {
+            modal.classList.remove("is-open");
+        })
+
+    </script>
 </body>
 
 </html>

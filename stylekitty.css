@@ -1,3 +1,4 @@
+/* Обнуление */
 *, *:before, *:after {
     padding: 0;
     margin: 0;
@@ -6,10 +7,11 @@
 }
 html {
     font-family: 'Lato', "Arial", sans-serif;
+    font-size: 14px;
     color: #1A212F;
 }
-body {
-    background-color: #E5E5E5;
+body.lock {
+    overflow: hidden;
 }
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Rubik', sans-serif;
@@ -17,6 +19,184 @@ h1,h2,h3,h4,h5,h6 {
 a {
     color: #FF7236;
 }
+/* Контейнер ширины всего сайта */
+.container {
+    max-width: 1366px;
+    margin: 0px auto 0px auto;
+    padding: 0px 15px 0px 15px;
+}
+/* Заголовок */
+.sub-header {
+    padding: 146px 0px 60px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.h1 {
+    font-size: 36px;
+}
+/* Фильтр упорядочивания */
+.dropdown-filter {
+    position: relative;
+    display: inline-block;
+    box-shadow: 0px 2px 12px rgba(173, 152, 143, 0.18);
+    width: 174px;
+    height: 35px;
+    border-radius: 25px;
+}
+.dropdown-filter__button {
+    width: 100%;
+    height: 100%;
+    padding: 16px 16px 16px 16px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dropdown-filter__content {
+    display: none;
+    position: absolute;
+    background: #ffffff;
+    z-index: 1;
+}
+.dropdown-filter__content a {
+    color: black;
+    padding: 12px 16px 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-filter__content a:hover {
+    background: #fff;
+}
+.dropdown-filter:hover .dropdown-filter__content {
+    display: block;
+}
+.dropdown-filter:hover .dropdown-size__button {
+    background: #fff;
+}
+
+/* Основная часть сайта - карточки номеров и фильтр */
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+/* Сетка основной части */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px -15px -15px -15px;
+}
+.grid > * {
+    padding: 15px 15px 15px 15px;
+}
+/* Сетка фильтра номеров */
+.grid-sidebar,
+.grid-sidebar-ipad {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.grid-sidebar {
+    width: 15%;
+}
+.grid-sidebar-ipad {
+    width: 100%;
+}
+.grid-sidebar p,
+.grid-sidebar-ipad p {
+    font-weight: 500;
+    font-size: 16px;
+    padding: 30px 0px 20px 0px;
+}
+.grid-sidebar > *,
+.grid-sidebar-ipad > * {
+    padding: 5px 0px 5px 0px;
+}
+.sidebar__price {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px 0px 0px;
+}
+.sidebar__price > * {
+    width: 45%;
+    height: 24px;
+    border: 1px solid #E1E1E1;
+}
+.button-block-sidebar {
+    background: #FAC663;
+    justify-content: center;
+    margin: 37px 0 0 0;
+    color: black;
+    border: 2px solid #FAC663;
+}
+.button-block-sidebar:hover,
+.button-block-sidebar:focus {
+    background: #fff;
+}
+.checkbox {
+    margin: 0px 10px 0px 0px;
+}
+/* Сетка карточек номеров */
+.grid-products > * {
+    width: calc(100% / 3);
+}
+.grid-products {
+    width: 85%;
+}
+/* Карточка номера */
+.card {
+    background: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+    border-radius: 6px 6px 0 0;
+}
+/* Контейнер картинки в карточке номера*/
+.card-media {
+    height: 185px;
+    position: relative;
+    overflow: hidden;
+}
+/* Картинка в карточке */
+.card-image {
+    /* display: block; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*! object-position: left; */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Иконки оснащения номера */
+.card-feature {
+    padding: 0px 0px 0px 8px;
+}
+/* Содержимое карточки номера */
+.card-body {
+    padding: 25px 20px 25px 20px;
+}
+/* Название номера в карточке номера */
+.card-title {
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 0px 0px 20px 0px;
+}
+.card-param {
+    padding: 0px 0px 15px 0px;
+}
+.card-price {
+    font-size: 18px;
+    font-weight: 500;
+}
+/* Контейнер кнопки Забронировать в карточке номера */
+.card-actions {
+    margin: 15px 0px 0px 0px;
+}
+/* Иконка оснащения номера */
 .icon {
     display: inline-block;
     width: 1em;
@@ -24,6 +204,7 @@ a {
     stroke-width: 0;
     stroke: currentColor;
     fill: currentColor;
+  
 }
 .button {
     border: none;
@@ -35,7 +216,7 @@ a {
     font-weight: 600;
     color: #fff;
     font-size: 14px;
-    padding: 20px 30px;
+    padding: 20px 30px 20px 30px;
     height: 50px;
     border-radius: 50px;
     background: #FF7236;
@@ -45,7 +226,7 @@ a {
     background: #e55c22;
 }
 .button .button-icon {
-    margin: 0 -20px 0 0;
+    margin: 0px -20px 0px 0px;
     color: #FF7236;
     font-size: 16px;
 }
@@ -55,170 +236,41 @@ a {
     justify-content: center;
     width: 34px;
     height: 34px;
-    background-color: #fff;
+    background: #fff;
     border-radius: 50%;
 }
 .button-block {
     display: flex;
     width: 100%;
 }
-.card {
-    background: #FFFFFF;
-    border: 1px solid #E1E1E1;
-    box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
-    border-radius: 6px 6px 0 0;
-}
-.card-media {
-    height: 185px;
-}
-.card-image {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.card-title {
-    font-family: "Rubik", sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-}
-.card-features {
-    margin: -4px;
-}
-.card-features > * {
-    padding: 4px;
-}
-.card-body {
-    padding: 25px 20px;
-}
-.card-body div {
-    padding: 7px 0;
-}
-.card-actions {
-    margin-top: 15px;
-}
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -15px;
-}
-.grid > * {
-    padding: 15px;
-}
-.container {
-    max-width: 1366px;
-    margin: 0px auto;
-    padding: 0 15px;
-}
 
-.grid-sidebar {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 15%;
-}
-.main {
-    display: flex;
-    justify-content: space-between;
-}
-.grid-products > * {
-    width: calc(100% / 3)
-}
-.grid-products {
-    width: 85%;
-}
-.grid-sidebar p {
-    font-weight: 500;
-    font-size: 16px;
-}
-.grid-sidebar div {
-    font-weight: 400px;
-    font-size: 14px;
-}
-.grid-sidebar > * {
-    padding: 5px
-}
-.sidebar__price {
-    display: flex;
-    justify-content: space-between;
-}
-.sidebar__price > * {
-    width: 45%;
-}
-.button-block-sidebar {
-    background-color: #FAC663;
-    justify-content: center;
-    margin: 25px 0 0 0;
-    color: black;
-    border: 2px solid #FAC663;
-}
-.button-block-sidebar:hover,
-.button-block-sidebar:focus {
-    background-color: #fff;
-}
-.dropdown-filter {
-    position: relative;
-    display: inline-block;
-}
-.dropdown-filter__content {
+.button_primary_filter {
     display: none;
-    position: absolute;
-    background-color: #ffffff;
-    z-index: 1;
-    font-size: 14px;
 }
-.dropdown-filter__content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-size: 14px;
+.button_primary_filter span {
+    padding: 0px 10px 0px 0px;
 }
-.dropdown-filter__content a:hover {
-    background-color: #fff
-}
-.dropdown-filter:hover .dropdown-filter__content {
-    display: block;
-}
-.dropdown-filter:hover .dropdown-size__button {
-    background-color: #fff;
-}
-.dropdown-filter__button {
-    background-color: #fff;
-    padding: 16px;
-    border: none;
-    cursor: pointer;
-    height: 55px;
-    text-align: left;
-    border-radius: 25px;
-}
-.sub-header {
-    padding: 150px 0 0 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+/* Контейнер рекламной части */
 .promotion {
     height: 379px;
     margin: 100px auto 0 auto;
-    background-image: url("./images/catbord.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-left: 270px;
+    background: center / cover  no-repeat url("./images/catbord.png");
+    padding: 0px 0px 0px 270px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     border-radius: 10px;
 }
+/* Содержимое рекламной части */
 .promotion-body {
     width: 35%;
+    padding: 78px 0px 0px 0px;
 }
 .promotion-title {
     font-size: 36px;
     font-weight: 700;
     line-height: 43px;
+    padding: 0px 0px 25px 0px;
 }
 .promotion-title span {
     font-size: 56px;
@@ -227,85 +279,125 @@ a {
 }
 .promotion-content {
     font-size: 16px;
+    padding: 0px 0px 35px 0px;
+}
+.promotion__button {
+    width: 206px;
+}
+.promotion__footer-for-mobile {
+    display: none;
 }
 .button-block-promotion {
     color: black;
-    background-color: #FFf;
-    width: 60%;
+    background: #fff;
 }
 .button-block-promotion:hover {
-    background-color: #FF7236;
+    background: #FF7236;
 }
 .button-block-promotion:hover .button-icon-promotion {
-    background-color: #FF7236;
+    background: #FF7236;
 }
 .button-icon-promotion {
-    background-color: #FF7236;
+    background: #FF7236;
     border: 2px solid white;
 }
+/* Контейнер части локации и контактов */
 .location {
     width: 100%;
     height: 580px;
-    margin-top: 100px;
+    margin: 100px 0px 0px 0px;
     display: flex;
 }
+/* Область контактов */
 .contacts {
     width: 40%;
-    background-color: #FAC663;
+    background: #FAC663;
 }
+/* Содержимое области контактов */
 .contacts-body {
-    padding: 70px 0 0 200px;
+    padding: 70px 0px 0px 200px;
 }
 .contacts-body > p {
     font-weight: 700;
 }
 .contacts-body__title-p,
 .contacts-body__title {
-    padding: 35px 0 0 0;
+    padding: 35px 0px 0px 0px;
+    font-size: 15px;
 }
+.contacts-body__title {
+    font-size: 36px;
+    font-weight: bold;
+}
+/* Область карты */
 .map {
     position: relative;
     width: 60%;
-    background-image: url("./images/map.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: center / cover no-repeat url("./images/map.png");
 }
+/* Указание местоположения на карте */
 .catatmap {
     position: absolute;
     top: 42.6%;
     left: 32.9%;
 }
+/* Подвал - нижняя часть сайта */
 .footer {
     max-width: 1366px;
-    margin: 0 auto;
-    padding: 0 15px;
+    margin: 0px auto 0px auto;
+    padding: 0px 15px 0px 15px;
 }
-@media (max-width: 1366px) {
-    .container {
-        width: inherit;
-    }
-}
-@media (max-width:1023px) {
-    .grid-sidebar {
-        display: none;
-    }
-    .grid-products {
-        width: 100%;
-    }
-    .grid {
-        margin: 0;
-    }
-}
-@media (max-width:767px) {
-    .grid-products > * {
-        width: calc(100% / 2);
-        padding: 5px 5px 5px 5px;
-    }
-}
-@media (max-width:500px) {
-    .grid-products > * {
-        width: 100%;
-        padding: 5px 0px 5px 0px;
-    }
-}
+/* 
+body {
+    overflow: hidden;
+  } */
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+  }
+  
+  .modal__background {
+    background-color: blue;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+  }
+  
+  .modal__foreground {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    pointer-events: none;
+  }
+  
+  .modal__dialog {
+    pointer-events: auto;
+    margin: 50px 0;
+    flex-shrink: 0;
+    width: 500px;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 10px;
+  }
+  
+  .modal__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .modal:not(.is-open) {
+    display: none;
+  }
+  
